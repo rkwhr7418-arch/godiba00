@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --godiva-dark: #24140C;
+    --godiva-gold: #D4AF37;
+    --godiva-gold-light: #F3E5AB;
+    --godiva-cream: #FDFBF7;
+    --godiva-warm-gray: #ECE8E1;
+  }
+
+  body {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #24140C;
+    background-color: #FDFBF7;
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, .font-serif-luxury {
+    font-family: 'Noto Serif KR', 'Cormorant Garamond', Georgia, serif;
+  }
+  
+  .font-brand {
+    font-family: 'Cormorant Garamond', serif;
+    letter-spacing: 0.15em;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FDFBF7;
+}
+::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b89326;
+}
+
+/* Hide scrollbar utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Luxury gold horizontal navigation scrollbar for mobile/tablet */
+.nav-scrollbar::-webkit-scrollbar {
+  height: 4px;
+}
+.nav-scrollbar::-webkit-scrollbar-track {
+  background: rgba(36, 20, 12, 0.9);
+  border-radius: 9999px;
+  margin: 0 12px;
+}
+.nav-scrollbar::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+  border-radius: 9999px;
+}
+.nav-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #F3E5AB;
+}
+.nav-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #D4AF37 rgba(36, 20, 12, 0.9);
+  -webkit-overflow-scrolling: touch;
+}
+
+@keyframes menuCascadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.menu-cascade-item {
+  animation: menuCascadeIn 220ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.menu-cascade-delay-0 { animation-delay: 0ms; }
+.menu-cascade-delay-1 { animation-delay: 35ms; }
+.menu-cascade-delay-2 { animation-delay: 70ms; }
+.menu-cascade-delay-3 { animation-delay: 105ms; }
+.menu-cascade-delay-4 { animation-delay: 140ms; }
+.menu-cascade-delay-5 { animation-delay: 175ms; }
+.menu-cascade-delay-6 { animation-delay: 210ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  .menu-cascade-item {
+    animation: none;
+  }
+}
+

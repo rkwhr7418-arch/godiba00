@@ -1,0 +1,6 @@
+{
+  "name": "고디바 모찌(GODIVA MOCHI) 공식 구매 가이드",
+  "description": "벨기에 프리미엄 초콜릿과 쫄깃한 찹쌀떡의 만남! 잠실 롯데월드몰 단독 고디바 모찌 메뉴, 가격, 실시간 웨이팅 및 구매 가이드",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
